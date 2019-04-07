@@ -9,14 +9,22 @@ var page = `
         <body id="body">
             <center><h1 id="header">N/A</h1></center>
             <div class="bottombar" id="bottombar">
-                <label class="switch" id="colorswitch" onchange="colorOptionChange()">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
+                <div class="flex-container">
+                    <div>
+                        <center><label class="switch" id="colorswitch" onchange="colorOptionChange()">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label></center>
+                        <center><h2>Dark Mode</h2></center>
+                    </div>
+                </div>
             </div>
             <script src="./design.js"></script>
         </body>
         <style>
+            ::selection {
+                background: #0d2244;
+            }
             @font-face {
                 font-family: "TitilliumWebFont";
                 src:url("./assets/fonts/TitilliumWeb-Light.ttf");
@@ -27,12 +35,16 @@ var page = `
                 padding-top:140px;
                 animation-name: fadein;
                 animation-duration: 2s;
+                user-select: none;
             }
             h2 {
                 font-family: "TitilliumWebFont";
+                font-size: 20px;
+                margin-top: 0px;
+                color: white;
+                user-select: none;
             }
             .bottombar {
-                opacity: 0.2; 
                 border-top-left-radius: 20px; 
                 border-top-right-radius: 20px; 
                 height: 75px; 
@@ -41,9 +53,20 @@ var page = `
                 left: 0px;
                 right: 0px;
                 position: fixed; 
-                border-style: solid; 
+                border-left-style: solid; 
+                border-right-style: solid; 
+                border-top-style: solid; 
                 border-color: gray; 
                 background-color: rgb(81, 81, 81);
+            }
+            .flex-container {
+                display: flex;
+                flex-direction: row;
+            }
+            .flex-container > div {
+                width:100px;
+                height:75px;
+                margin-left:20px;
             }
 
             .switch {
@@ -51,7 +74,7 @@ var page = `
                 display: inline-block;
                 width: 60px;
                 height: 34px;
-                margin-left: 35px;
+                // margin-left: 35px;
                 margin-top: 5px;
             }
             .switch input {
