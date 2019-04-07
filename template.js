@@ -6,8 +6,11 @@ var page = `
             <title>Glare</title>
         </head>
         <body id="body">
-            <h1 id="header">Hello World</h1>
-            <h2 id="header2">Test</h2>
+            <center><h1 id="header">Good morning!</h1></center>
+            <select id="selector">
+                <option id="option1">Light</option>
+                <option id="selector-option2">Dark</option>
+            </select>
             <script src="./design.js"></script>
         </body>
         <style>
@@ -17,9 +20,17 @@ var page = `
             }
             h1 {
                 font-family: "TitilliumWebFont";
+                font-size: 80px;
+                padding-top:340px;
+                animation-name: fadein;
+                animation-duration: 2s;
             }
             h2 {
                 font-family: "TitilliumWebFont";
+            }
+            @keyframes fadein {
+                from {opacity: 0.0;}
+                to {opacity: 1.0;}
             }
     </html>
     `;

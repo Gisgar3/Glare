@@ -4,7 +4,8 @@ const url = require("url");
 
 function createWindow() {
     // Initialize window and set attributes
-    let win = new BrowserWindow();
+    let win = new BrowserWindow({show:false});
+    win.webContents.openDevTools();
     win.hasShadow(true);
     win.setMenu(null);
     win.loadURL(url.format({
@@ -12,12 +13,14 @@ function createWindow() {
         protocol: 'file:',
         slashes: true
     }));
-    win.maximize();
-    // To use DevTools --> win.webContents.openDevTools();
 
     win.on('closed', () => {
         win = null
     })
+
+    win.on("ready-to-show", () => {
+        win.maximize();
+    });
 
 }
 
