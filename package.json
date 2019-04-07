@@ -1,13 +1,13 @@
 {
   "name": "glare",
-  "version": "0.0.1",
+  "version": "0.2.1",
   "description": "Home assistant and daily-brief application.",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
   },
-  "repository": "https://github.com/Gisgar3/glare/",
+  "repository": "https://github.com/Gisgar3/Glare/",
   "contributors": [
     "Gavin Isgar <gisgar3@gmail.com> (https://github.com/Gisgar3/",
     "Tristan Barber <worktowin1021@yahoo.com>",
@@ -16,5 +16,8 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^4.1.4"
+  },
+  "dependencies": {
+    "request": "^2.88.0"
   }
 }
