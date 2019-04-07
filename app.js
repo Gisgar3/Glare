@@ -21,6 +21,25 @@ function createWindow() {
     win.on("ready-to-show", () => {
         win.maximize();
     });
+    
+    // Setup Window
+    let setupWin = new BrowserWindow({show:false});
+    setupWin.setSize(800, 600);
+    setupWin.loadURL(url.format({
+        pathname: path.join(__dirname, "/", 'setup.html'),
+        protocol: 'file:',
+        slashes: true
+    }));
+    setupWin.webContents.openDevTools();
+    setupWin.hasShadow(true);
+    setupWin.setMenu(null);
+    setupWin.on('closed', () => {
+        setupWin = null
+    })
+
+    setupWin.on("ready-to-show", () => {
+        setupWin.maximize();
+    });
 
 }
 

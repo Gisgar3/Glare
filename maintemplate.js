@@ -10,20 +10,44 @@ var page = `
             <center><h1 id="header">N/A</h1></center>
             <div class="bottombar" id="bottombar">
                 <div class="flex-container">
-                    <div>
+                    <div style="border-right-style: solid; border-right-color: gray; padding-right:20px;">
                         <center><label class="switch" id="colorswitch" onchange="colorOptionChange()">
                             <input type="checkbox">
                             <span class="slider round"></span>
                         </label></center>
                         <center><h2>Dark Mode</h2></center>
                     </div>
+                    <div>
+                        <center><button class="button" id="setupbutton" onclick="handleSetup()" style="margin-top:5px;">Setup</button></center>
+                    </div>
                 </div>
             </div>
-            <script src="./design.js"></script>
+            <script src="./maindesign.js"></script>
         </body>
         <style>
             ::selection {
                 background: #0d2244;
+            }
+            .button {
+                background-color: #ccc;
+                border: none;
+                color: white;
+                padding: 20px 26px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: "TitilliumWebFont";
+                cursor: pointer;
+                border-radius: 10px;
+                user-select: none;
+                outline-width: 0;
+                transition: border-radius .3s, background-color .3s;
+                
+            }
+            .button:hover {
+                border-radius:20px;
+                background-color: #777777;
             }
             @font-face {
                 font-family: "TitilliumWebFont";
@@ -31,7 +55,7 @@ var page = `
             }
             h1 {
                 font-family: "TitilliumWebFont";
-                font-size: 75px;
+                font-size: 85px;
                 padding-top:140px;
                 animation-name: fadein;
                 animation-duration: 2s;
