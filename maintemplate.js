@@ -18,13 +18,7 @@ var page = `
                         <center><h2>Dark Mode</h2></center>
                     </div>
                     <div>
-
                         <center><button src="./setupdesign.js" onclick="handleClick()" class="button" id="setupbutton" style="margin-top:5px;">Setup</button></center>
-
-                        <center><button src="./setupdesign.js" onclick="handleClick()" class="button" id="setupbutton" style="margin-top:5px;">Setup</button></center>
-
-                        <center><button class="button" id="setupbutton" onclick="handleSetup()" style="margin-top:5px;">Setup</button></center>
-
                     </div>
                 </div>
             </div>
@@ -67,10 +61,6 @@ var page = `
                 animation-duration: 2s;
                 user-select: none;
                 transform: translateY(50%);
-                padding-top:140px;
-                animation-name: fadein;
-                animation-duration: 2s;
-                user-select: none;
             }
             h2 {
                 font-family: "TitilliumWebFont";

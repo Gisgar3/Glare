@@ -7,10 +7,7 @@ var page = `
     </head>
     <body id="body">
         <div id="flex-container">
-
             <center><h1>Panel Setup</h1></center>
-            <center><h1>Panel Setup</h1></center>
-
         </div>
     </body>
     <style>
