@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Glare</title>
+</head>
+<style>
+    @font-face {
+        font-family: "TitilliumWebFont";
+        src:url("./assets/fonts/TitilliumWeb-Light.ttf");
+    }
+</style>
+<body id="body">
+    <h1 style="font-family: TitilliumWebFont">Hello, welcome to Glare!</h1>
+    <select id="selector">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+    <h2 style="font-family: TitilliumWebFont; color:greenyellow;">This is just a test</h2>
+</body>
+
+<script>
+require("./renderer.js");
+let main = require("./main.js");
+if (document.getElementById("selector").innerText.toString() == "Light") {
+    document.getElementById("body").setAttribute("background-color", "Green");
+}
+</script>
+
+</html>
