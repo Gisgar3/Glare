@@ -7,9 +7,9 @@ var page = `
         </head>
         <body id="body">
             <center><h1 id="header">Good morning!</h1></center>
-            <select id="selector">
-                <option id="option1">Light</option>
-                <option id="selector-option2">Dark</option>
+            <select id="selector" onchange="colorOptionChange()">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
             </select>
             <script src="./design.js"></script>
         </body>
@@ -31,6 +31,14 @@ var page = `
             @keyframes fadein {
                 from {opacity: 0.0;}
                 to {opacity: 1.0;}
+            }
+            @keyframes colorfadetodark {
+                from {background-color: white}
+                to {background-color: gray}
+            }
+            @keyframes colorfadetolight {
+                from {background-color: gray}
+                to {background-color: white}
             }
     </html>
     `;
