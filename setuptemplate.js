@@ -7,13 +7,17 @@ var page = `
     </head>
     <body id="body">
         <div id="flex-container">
-
+            <center><h1>Panel Setup</h1></center>
         </div>
     </body>
     <style>
     @font-face {
         font-family: "TitilliumWebFont";
         src:url("./assets/fonts/TitilliumWeb-Light.ttf");
+    }
+    h1 {
+        font-family: "TitilliumWebFont";
+        font-size: 50px;
     }
     .flex-container {
         display: flex;
